@@ -1,0 +1,16 @@
+// schema.prisma
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:@localhost:3306/strater"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Exemple {
+  id    Int     @id @default(autoincrement())
+  test String  @unique
+  name  String?
+}
